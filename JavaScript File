@@ -1,0 +1,46 @@
+var itemShoes = {name:"Shoes", price: 67.99, quantity: 0};
+var itemCoat = {name:"Coat", price: 78.99, quantity: 0};
+var itemBook = {name:"Book", price: 9.99, quantity: 0};
+var shoppingCart = [];
+var price;
+var input2;
+var i=0;
+var total = 0;
+
+while(input2 !== "no"){
+    var input = prompt('Would you like to buy shoes, coats, or books?\nPress "q" to exit\nPress etc to Exit To Cart');
+
+  if (input === 'shoes') {
+    var shoesQuantity = prompt('How many pair of shoes would you like?');
+    alert(shoesQuantity + " pair/s of shoes has/have been added to your cart");
+      itemShoes.quantity = shoesQuantity;
+      itemShoes.price = shoesQuantity * itemShoes.price;
+      shoppingCart.push(itemShoes);
+  }
+  else if (input === 'coats') {
+    var coatQuantity = prompt('How many coats would you like?');
+    alert(coatQuantity + " coat/s have been added to your cart");
+      itemCoat.quantity = coatQuantity
+      itemCoat.price = coatQuantity * itemCoat.price;
+      shoppingCart.push(itemCoat); 
+}
+   else if (input === 'books') {
+    var bookQuantity = prompt('How many books would you like?');
+    alert(bookQuantity + " book/s have been added to your cart");
+      itemBook.quantity = bookQuantity;
+      itemBook.price = bookQuantity * itemBook.price;
+      shoppingCart.push(itemBook);
+     
+};
+
+ input2 =  prompt('Would you like to buy anything else? yes or no?');
+  console.log(shoppingCart[i].quantity +"\n" +shoppingCart[i].name +"\n" +shoppingCart[i].price);
+  i++;
+  }
+  
+function totalPrice(){
+// shoppingCart[0].price + shoppingCart[1].price + shoppingCart[2].price;
+console.log(shoppingCart.price);
+i++;
+}
+
